@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscador de Palabras</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #243949, #517fa4);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 25px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      border: none;
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 16px;
+      resize: none;
+      outline: none;
+      color: #333;
+      background: #f2f2f2;
+    }
+
+    .search-area {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    #searchInput {
+      flex: 1;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    #searchBtn {
+      background: #00c851;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #searchBtn:hover {
+      background: #009c3b;
+    }
+
+    .counter {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .result {
+      margin-top: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 15px;
+      border-radius: 10px;
+      line-height: 1.6;
+      color: #fff;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .highlight {
+      background: #ffeb3b;
+      color: #000;
+      font-weight: bold;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 Buscador de Palabras</h1>
+
+    <div class="inputs">
+      <textarea id="textInput" placeholder="Escribe o pega aquí tu texto..."></textarea>
+
+      <div class="search-area">
+        <input type="text" id="searchInput" placeholder="Palabra a buscar..." />
+        <button id="searchBtn">Buscar</button>
+      </div>
+    </div>
+
+    <div id="counter" class="counter">Coincidencias encontradas: 0 | Espacios en el texto: 0</div>
+
+    <div id="result" class="result"><em>No hay texto para mostrar.</em></div>
+  </div>
+
+  <script src="./dist/index.js"></script>
+</body>
+</html>
